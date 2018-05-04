@@ -1,0 +1,13 @@
+[user]
+	name = Qingmin Liu
+	email = calmarrow@gmail.com
+[push]
+	default = simple
+[color]
+	ui = true
+	diff = true
+	status = true
+	branch = true
+[core]
+	editor = vim
+	filemode = true
