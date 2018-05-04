@@ -1,0 +1,77 @@
+	GIT Basic Usage
+
+-> git log related
+git log
+git log -p
+git log --pretty=format:'%h:%s' --topo-order --graph
+git log --pretty=format:'%h:%s' --date-order --graph
+git reflog
+git log -g
+
+-> git tag releated
+git tag -a tagname -m "comments"
+git tag -d tagname
+
+git push origin --tags
+git push origin tagname
+
+git push origin --delete tagname
+
+- sync tags
+git tag -l | xargs git tag -d 
+git fetch --prune
+
+-> git branch related
+git branch -a
+git push origin --delete <branchName>
+git branch -m oldbranch newbranch     
+
+-> Drop/Clean all untracked modifications
+git reset --hard
+git reset --hard commit_id
+git reset --soft commit_id
+
+- Remove untracked directories in addition to untracked files.
+git clean -xdf 
+
+- Donot actually remove anything, just show what would be done.
+git clean -xnd
+
+-> patch related
+git format-patch -1 commit_id
+git diff commit_previous commit > mypatch.diff
+
+-> git commit
+git commit --amend
+
+-> git cherry-pick from different repository
+git format-patch
+git am
+
+-> git configuration
+git config --global user.name "Qingmin Liu"
+git config --global user.email "calmarrow@gmail.com"
+
+git config user.name "Qingmin Liu"
+git config user.email "calmarrow@gmail.com"
+
+git config --global color.diff true
+git config --global color.status true
+git config --global color.branch true
+git config --global color.ui true
+
+git config --global core.editor vim
+
+git commit --amend --author="Qingmin Liu <calmarrow@gmail.com>"
+
+git config --global push.default simple
+
+-> ignore filemode change
+git config --global core.filemode false ==>~/.gitconfig
+git config core.filemode false  ==>.git/config
+
+-> build a git server
+git init --bare <git_server_path> 
+
+-> change git server path
+git remote set-url origin <new_path> 
