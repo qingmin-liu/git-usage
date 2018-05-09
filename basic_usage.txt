@@ -75,3 +75,6 @@ git init --bare <git_server_path>
 
 -> change git server path
 git remote set-url origin <new_path> 
+
+-> checkout a single branch
+git clone -b branch_name --single-branch <git_server>
