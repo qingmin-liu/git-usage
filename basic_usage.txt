@@ -78,3 +78,9 @@ git remote set-url origin <new_path>
 
 -> checkout a single branch
 git clone -b branch_name --single-branch <git_server>
+
+-> check only the specified depth 
+git clone --depth=N <git_path>
+
+If want to check old history, use:
+git fetch --unshallow
