@@ -84,3 +84,10 @@ git clone --depth=N <git_path>
 
 If want to check old history, use:
 git fetch --unshallow
+
+-> git hash id abbrev configuration
+git config core.abbrev 10
+
+Linux kernel script will automatically append it to UTS_RELEASE.
+By default it's 7 digits. However you could change it with above
+commands.
