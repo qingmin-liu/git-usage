@@ -26,15 +26,23 @@ git branch -a
 git push origin --delete <branchName>
 git branch -m oldbranch newbranch     
 
+# add remote branch to local
+git remote add <repo> <remote_git_repo>
+git fetch <repo>
+
+e.g.
+git remote add qingmin https://github.com/qingmin-liu/mtcp.git
+git fetch qingmin
+
 -> Drop/Clean all untracked modifications
 git reset --hard
 git reset --hard commit_id
 git reset --soft commit_id
 
-- Remove untracked directories in addition to untracked files.
+# Remove untracked directories in addition to untracked files.
 git clean -xdf 
 
-- Donot actually remove anything, just show what would be done.
+# Donot actually remove anything, just show what would be done.
 git clean -xnd
 
 -> patch related
@@ -88,6 +96,7 @@ git fetch --unshallow
 -> git hash id abbrev configuration
 git config core.abbrev 10
 
+# Note:
 Linux kernel script will automatically append it to UTS_RELEASE.
 By default it's 7 digits. However you could change it with above
 commands.
